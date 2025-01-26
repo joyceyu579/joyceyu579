@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JY_GRAPH</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+
+<script src="app.js"></script> 
+<link rel = "stylesheet" href="app2.css"/>
+
+<body>
+    <div id="photos" width = 100%/ height=100%>
+        <img class="clipped-image" src="pics/spring-flowers-campanile.jpeg" width = 100% height=50%>
+    </div>
+     
+    <div id="buttons-container">
+        <div id="buttons-box" width = 100% height = 30px>
+            <button class="about-me-button" onclick="ScrollTo_SECTION(GOALS, 'GOALS')">About Me</button>
+            <button class="projects-button" onclick="ScrollTo_SECTION(PROJECTS, 'PROJECTS')">Projects</button>
+            <button class="experience-button" onclick="ScrollTo_SECTION(EXPERIENCE, 'EXPERIENCE')">Coursework</button>
+            <!--<button class="hobbies-button" onclick="ScrollTo_SECTION(HOBBIES, 'HOBBIES')"> Hobbies</button>-->
+            <button class="resume-button" onclick="NewTab('JoyceYu_Resume_2025.pdf')">Resume</button>
+            <button class="GitHub-button" onclick="NewTab('https://github.com/joyceyu579')">GitHub</button>
+            <button class="LinkedIn-button" onclick="NewTab('https://www.linkedin.com/in/joyceyu579/')">LinkedIn</button>
+            <button class="contact-button" onclick="window.location.href = 'mailto:joyceyu579@berkeley.edu';" style="color: purple;">Contact</button>
+            
+        </div>
+    </div>
+
+    <script src="scroll.js" defer></script> 
+
+    <div class="about-container1">
+        <p class = "ABOUT-ME">
+            ABOUT ME:
+        </p>
+        <img class="clipped-image2" src="pics/crab.png" onclick="alertButton()"/>
+        <!--<img class="clipped-image2" src="me.jpeg"/>-->
+        <p class = "MyName">
+            Joyce Yu
+        </p>
+
+        <p class = "ABOUT-ME-CREDENTIALS"> Master of Science <br>Data Science and Software Engineering<br>University of California, Berkeley<br><br>
+            <a href="mailto:joyceyu579@berkeley.edu" style="color: purple;">joyceyu579@berkeley.edu</a>
+        </p>
+    </div> 
+
+    <div class="graph-container" style="color: purple;">
+        
+        <svg id="graph", width="600" height="500" x="700">
+            <!-- <line x1="20" y1="500" x2="500" y2="500" stroke="black" stroke-width="2" /> 
+                 <line x1="20" y1="500" x2="20" y2="20" stroke="black" stroke-width="2" /> -->
+        </svg>
+        <script src="GraphNetwork.js"></script>
+    </div>
+
+    <div>
+    <p id = "GOALS" class = "SECTION-TITLES">
+        Goals and Aspirations:
+    </p>
+
+    <p class = "GOALS-PARAGRAPH">
+        "Looking to explore our world in the most efficient ways possible..."
+    </p>
+    <p class = "INTRO-PARAGRAPH">
+        Hi there, my name is Joyce! I am a current graduate student at the University of California, Berkeley studying data science and software engineering. 
+        I have a strong interest in building and integrating machine learning tools into my life's work, whether that be in the tech industry, biopharmaceutical space, or other business sectors; I want to explore it all! 
+        More particularly, I want to learn more about our world through the data that describes it; and where I can help make the largest contributions in the most efficient ways possible.
+    </p>
+    
+
+    <p id = "PROJECTS" class = "SECTION-TITLES">
+        Projects:
+    </p>
+
+<!-- CHEM277B and DATA200S FINAL PROJECT-->
+        <div class="projects-container">
+
+            <div class="pic_container"> 
+                <img class="IMAGES" src="pics/ML1.jpg">
+            </div>
+            
+            <div class = project-sub-container>
+                <div>
+                <p class = project-title> 2 Additional projects incorporating Computer Vision and/or Natural Language Processing (NLP)</p>
+
+                <p class = project-paragraph>
+                    On-going. Completion by May 2025.
+                </p>
+                </div>
+            </div>
+        </div>
+    
+<!-- Molecular substructure search-->
+        <div class="projects-container">
+
+            <div class="pic_container"> 
+                <img class="IMAGES" src="pics/atom.png">
+            </div>
+
+            <div class = project-sub-container>
+                <div>
+                    <p class = project-title> Molecular substructure search via Graph based modeling and algorithms 
+                        <button class="GitHub2-button" onclick="NewTab('https://github.com/joyceyu579/Molecular-substructure-search-via-Graph-based-modeling-and-algorithms')">GitHub Repo</button>
+                    </p>
+                <p class = project-subtitle> Languages: Python, C++, BASH <br> Libraries: NetworkX, matplotlib, itertools, Eigen/Eigen, complex, utility, iostream, cmath, vector and other C++ container libraries </br></p>
+                <p class = project-paragraph>
+                    Inspired by the RDKit library, I used python to develop my own library and molecular fingerprinting algorithm that enables users to perform substructure searches 
+                    via the terminal and BASH commands for my final project in the CHEM274A course at UC Berkeley. In addition, this program is capable of generating visuals to obtain graph representation of user-chosen molecules. 
+                    It also assists the user in identifying other molecular properties such as different functional groups, aromatic structures, and features using graph traversal algorithms. 
+
+                    <br><br>Included in the repository are additional files used to draft the main program:
+                    <br>- A python file where I imeplement the depth-first-search algorithm to detect unique cycles in a ring, and to gain a better understanding of how libraries like RDKit and NetworkX uses DFS/BFS to detect cycles in aromatic compounds.
+                    <br>- A python parser file (generously provided by UC Berkeley CHEM274A course instructors) used to parse .sdf files. 
+                    <br>- A C++ program (.cpp, .hpp, and .tpp files) used to compare graph representations, traversals, and computations of molecules using the Eigen library in C++ vs. NetworkX library in Python
+                </p>
+                </div>
+            </div>
+        </div>    
+
+<!-- CHEM280 FINAL PROJECT-->
+        <div class="projects-container">
+            <div class="pic_container"> 
+                <img class="IMAGES" src="pics/laptop.avif">
+            </div>
+
+            <div class = project-sub-container>            
+                <div>
+                <p class = project-title> Systemic evaluation and run time analysis of molecular simulations 
+                    <button class="GitHub2-button" onclick="NewTab('https://github.com/joyceyu579/Systemic-evaluation-and-run-time-analysis-of-molecular-simulations')">GitHub Repo</button>
+                </p>
+                <p class = project-subtitle> Languages: Python, C++, Git <br> Libraries: NumPy, math, random, fstream, array, vector, utility, chrono </br></p>
+
+                <p id = "chem280-paragraph" class = project-paragraph>
+                    In collaboration with 2 other engineers, we've modeled lennard-jones fluidic systems, simulated particles in motion via Monte Carlo methods, and refactored scripts using Python Standard Library into NumPy and C++ for our final project in CHEM280 at UC Berkeley. 
+                    To evaluate the space and run time complexity of our programs, and to assess the performance of our refactored scripts, BASH commands were used to time and compile our programs that can be used
+                    to compute the energy of particles in motion, and to make accurate predictions of larger systems through molecular dynamic simulations. 
+                </p>
+                </div>
+            </div>
+        </div>
+    
+<!-- CHEM274B FINAL BANKING-->
+        <div id = banking-container, class="projects-container">
+
+            <div class="pic_container"> 
+                <img class="IMAGES" src="pics/bank.png"> </img>
+            </div>
+            
+            <div class = project-sub-container>
+                <div>
+                <p class = project-title> BANKING SYSTEM APPLICATION       
+                    <button class="GitHub2-button" onclick="NewTab('https://github.com/joyceyu579/Banking-system-application')">GitHub Repo</button>
+                </p>
+                <p class = project-subtitle> Languages: Python <br> Libraries: Python standard library </p>
+
+                <p id = "bank-paragraph" class = project-paragraph>
+                    In collaboration with 3 other engineers, we've simulated a banking system capable of creating user accounts, withdrawals, deposits, money transfers, payments, and 2% cashbacks. 
+                    The application also keeps a historical record of transactions and prevents users from creating invalid or dangerous executions (i.e. overdrafts, duplicate withdrawals, etc.). 
+                    This application has gone through a series of tests to ensure its usability by business owners who may want to implement a purchasing or bank-like system.
+                </p>
+                </div>
+            </div>
+        </div>
+
+<!-- CURIA visualization tool-->
+        <div  class="projects-container">
+            <div class="pic_container"> 
+                <img class="IMAGES" src="pics/sankey.png">
+            </div>
+
+            <div class = project-sub-container>
+                <p class = project-title> Interactive visualization tool for product workflows and data summaries
+                    <button class="GitHub2-button" onclick="NewTab('https://github.com/joyceyu579/Interactive-visual-tool-for-product-workflows-and-data-summaries')">GitHub Repo</button>
+                </p>
+                <p class = project-subtitle> Languages: Python, HTML/CSS <br> Libraries: Plotly, NumPy, Pandas, webcolors, matplotlib </br></p>
+
+                <p class = project-paragraph>
+                    This repository contains an interactive data visualization tool that I built using Python and HTML. It was made specifically for employees and customers of Curia Global's Antibody Discovery team starting in August 2023. 
+                    The purpose is to summarize data and visualize a common workflow used by pharmaceutical companies for antibody research and development. 
+                    The interactive visualization tool is capable of summarizing ~6 months worth of wet-lab data into one flow diagram and captures more than 5 different types of data (passage of time, genetic strains of animals, sequencing information of top drug candidates, screening results, drug characterization data, and more.)
+                    
+                    <br><br>During this intitative of introducing new tools into the workplace, 
+                    I worked wih the research team and Curia's IT/cybersecurity department to ensure compliancy with all company and client data; 
+                    and taught bash/python basics to advance the skills of older colleagues/scientists.
+                    
+                    <br><br>Most importantly, the interactive visualization tool can be used to track the origins of the company's products and serves as a deliverable to clients.
+                </p>
+            </div>
+        </div>
+
+
+
+
+    <!-- CURRENT AND PREVIOUS MINI-PROJECTS-->
+    <p id = "EXPERIENCE", class = "SECTION-TITLES">
+        Coursework and Mini-projects:
+    </p>
+    <p class = "ABOUT-ME-PARAGRAPH2">
+    <p class = school-title> TECHNICAL COURSEWORK</p>
+    <p class = school-subtitle> University of California, Berkeley</p>   
+        <div>
+            <ul class="bullet-points"> 
+                <li> <p class = course-title> CHEM277B: Machine Learning Algorithms</p> </li>
+                <li> <p class = course-title> DATA200S: Principles and Techniques of Data Science</p> </li>
+                <li> <p class = course-title> CHEM274A: Programming Languages for Molecular Sciences: Python and C++</p> </li>
+                <li> <p class = course-title> CHEM274B: Software engineering fundamentals for Molecular Sciences</p> </li>
+                    <ul class="sub-bullet-points">
+                        <li>
+                            <p class = course-title>
+                                <button class="GitHub2-button" onclick="NewTab('https://github.com/joyceyu579/Ligand-based-screening-using-machine-learning-and-algorithms')">GitHub Repo</button>
+                                <b>LIGAND-BASED VIRTUAL SCREENING USING MACHINE LEARNING AND ALGORITHMS</b></p></li>
+                    </ul>
+                <li> <p class = course-title> PBHLTH142: Probability and Statistics in Biology and Public Health using R programming</p> </li>
+                <li> <p class = course-title> MATH10A/B: Methods of Mathematics - Calculus, Statistics, and Combinatorics </p> </li>
+            </ul>
+        </div>
+    <p class = school-subtitle> College of San Mateo</p>
+    <div>
+        <ul class="bullet-points"> 
+            <li> <p class = course-title> CIS364: From Data Warehousing to Big Data (SQL Databases)</p> </li>
+            <li> <p class = course-title> CIS133: NoSQL Databases </p> </li>
+            <li> <p class = course-title> CIS124: Foundations of Data science (DATA8 equivalent at UC Berkeley)</p> </li>
+            <li> <p class = course-title> CIS117: Python programming</p> </li>
+            <li> <p class = course-title> MATH270: Linear Algebra (MATH56 equivalent at UC Berkeley) </p> </li>
+            </ul>
+        </div>
+
+        <p class = school-title> OTHER COURSEWORK</p>
+        <p class = school-subtitle> University of California, Berkeley</p>
+            <div>
+                <ul class="bullet-points"> 
+                    <li> <p class = course-title> INDENG185: Entrepeneurship and Technology for Alternative Meats (Challenge lab)</p> </li>
+                    <li> <p class = course-title> UGBA196: Special Topics in Business Administration </p> </li>
+                    <li> <p class = course-title> INTEGBIC32: Bioinspired Design (Intersections of Engineering, Biology, Business, and Architecture) </p> </li>
+                    <li> <p class = course-title> COLWRIT10A: Introduction to Public Speaking </p> </li>
+                </ul>
+            </div>
+
+
+    <p id = "HOBBIES" class = "SECTION-TITLES">
+        Hobbies:
+    </p>
+    <p class = "HOBBIES-PARAGRAPH">
+        <ul class="bullet-points"> 
+            <li> <p class = course-title> Crabbing </p> </li>
+            <li> <p class = course-title> Volunteering </p> </li>
+            <li> <p class = course-title> Running / Hiking / Paddle-boarding / Kayaking </p> </li>
+            <li> <p class = course-title> Reading (Currently reading "The Genesis Machine" by Amy Webb)</p> </li>
+            <li> <p class = course-title> And more! --> 
+                <button class="curiosity-button" onclick="NewTab('https://www.linkedin.com/feed/update/urn:li:activity:7139090251876077569/')">https://www.linkedin.com/feed/update/urn:li:activity:7139090251876077569/</button></p> </li>
+        </ul>
+    </p>
+
+    </div>
+
+    
+</body>
+</html>
