@@ -1,8 +1,8 @@
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-const svgWidth = 600;  // SVG width (make sure this matches your SVG's actual width)
-const svgHeight = 500; // SVG height (make sure this matches your SVG's actual height)
+const svgWidth = 600;  
+const svgHeight = 500;
 const margin = 30
 
 const nodes = [
