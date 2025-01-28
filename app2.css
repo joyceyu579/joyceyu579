@@ -176,12 +176,14 @@ body { margin-left: 0; margin-right: 0;}
     margin-top: 2%;
     width: 30%;
     height: 30%;
+    z-index: 1;
 }
 
 .IMAGES{
     position: relative;
     width:300px;
     height: 300px;
+    z-index: 1;
 }
 
 .project-sub-container{
@@ -190,6 +192,7 @@ body { margin-left: 0; margin-right: 0;}
     text-align: left;
     width: 80%;
     height: 80%;
+    z-index: 3;
 }
 
 .project-title{
@@ -209,6 +212,7 @@ body { margin-left: 0; margin-right: 0;}
     text-align: left;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 
