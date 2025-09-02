@@ -1,0 +1,5 @@
+# word doc
+*.doc*
+
+# cache and store items
+.DS_Store
